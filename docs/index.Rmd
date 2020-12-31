@@ -1,10 +1,9 @@
----
-title: Nineteen Years Later
-author: Harry Potter
-date: July 31, 2016
-output:
-  prettydoc::html_pretty:
-    theme: cayman
-    highlight: github
-    math: katex
----
+## Example of displaying htmlwidgets on a Github pages site
+
+```{r}
+# Source: http://www.htmlwidgets.org/showcase_plotly.html
+library(plotly)
+p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
+            geom_bar(position = "dodge")
+ggplotly(p)
+```
