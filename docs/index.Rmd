@@ -1,16 +1,10 @@
 ---
-title: "html_docco template example"
+title: Nineteen Years Later
+author: Harry Potter
+date: July 31, 2016
 output:
-  rmdformats::html_docco:
-    thumbnails: true
-    lightbox: true
-    gallery: true
-pkgdown:
-  as_is: true    
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+    math: katex
 ---
-
-
-```{r, results="asis", echo=FALSE, message=FALSE, warning=FALSE}
-res <- knitr::knit_child('_example_body.Rmd', quiet = TRUE)
-cat(res, sep = '\n')
-```
